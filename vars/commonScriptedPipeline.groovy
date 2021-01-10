@@ -4,13 +4,19 @@ def call(Map config=[:], Closure body) {
             agent any
             stages{
                 stage("reservation"){
-                    echo "reserve"
+                    steps{
+                        echo "reserve"
+                    }
                 }
                 stage("installation"){
-                    echo "installation"
+                    steps{
+                        echo "installation"
+                    }
                 }
                 stage("configuration"){
-                    echo "configuration"
+                    steps{
+                        echo "configuration"
+                    }
                 }
                 body()
             }
